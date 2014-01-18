@@ -566,7 +566,10 @@
 				date.getUTCDate() == today.getDate()) {
 				cls.push('today');
 			}
-			if (currentDate && date.valueOf() == currentDate) {
+			if (currentDate && 
+					date.getUTCFullYear() == this.date.getUTCFullYear() &&
+					date.getUTCMonth() == this.date.getUTCMonth() &&
+					date.getUTCDate() == this.date.getUTCDate()) {
 				cls.push('active');
 			}
 			if (date.valueOf() < this.o.startDate || date.valueOf() > this.o.endDate ||
